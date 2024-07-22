@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class FooterComponent implements OnInit {
   emailForm: any = FormGroup;
-  constructor(private toastr: ToastrService,private fb: FormBuilder) { }
+  constructor(private toastr: ToastrService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.emailForm = this.fb.group({
@@ -22,9 +22,11 @@ export class FooterComponent implements OnInit {
   }
   onSubmit() {
     if (this.emailForm.valid) {
-      console.log('Form Submitted!', this.emailForm.value);
+      this.toastr.success('successfully submited', 'Success');
+      this.emailForm.controls['email'].setValue('');
+      this.emailForm.reset()
     } else {
-      console.log('Form is invalid');
+      this.toastr.warning('Email is invalid', 'Warning');
     }
   }
 }
