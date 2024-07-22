@@ -1,0 +1,24 @@
+<div class="text-desc mt-5">Featured Products</div>
+<div class="product-grid">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="image-container">
+        <img [src]="product.image" [alt]="product.name" />
+        <div class="zoom-icon" (click)="zoomImage(product.image)">
+          <span class="icon-square"></span>
+        </div>
+      </div>
+      <h3 class="text-label">{{ product.name }}</h3>
+      <p class="text-desc">{{ product.description }}</p>
+      <div class="amount">{{ product.amount }}</div>
+      <div class="rating">
+        <span *ngFor="let star of [1, 2, 3, 4, 5]" class="star" [class.filled]="star <= product.rating">★</span><span class="text-label">{{product.reviewcount}} Reviews</span>
+      </div>
+      
+    </div>
+</div>
+  
+  <!-- Zoom Modal -->
+  <div class="modal" *ngIf="isZoomed" (click)="isZoomed = false">
+    <img [src]="zoomedImage" class="modal-image" />
+  </div>
+  

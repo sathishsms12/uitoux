@@ -1,0 +1,68 @@
+<footer class="text-center text-lg-start bg-dark text-muted">
+    <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="content-box text-label  mt-3">Contact Us</div>
+            <div class="text-desc mt-3">Hi, We are always open for cooperation and suggestions, contacts us in one of the way in below:</div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <div class="text-desc">PHONE NUMBER</div>
+                    <div class="text-labels">08925297807</div>
+
+                    <div class="text-desc mt-3">OUR LOCATION</div>
+                    <div class="text-labels">1, Athipalayamrd, Ramanadhatpuram, Coimbatore, Tamilnadu</div>
+                </div>
+                <div class="col-6">
+                    <div class="text-desc">EMAIL ADDRESS</div>
+                    <div class="text-labels">careers@uitiuxsolutions.com</div>
+                    <div class="text-desc mt-3">WORKING HOURS</div>
+                    <div class="text-labels">Mon-Fri 10.00PM-06.00PM</div>
+                </div>
+            </div>
+          </div>
+          <div class="col-2 mt-3">
+            <div class="content-box text-label">Information</div>
+            <div class="text-desc mt-3">About Us</div>
+            <div class="text-desc mt-2">Delivery Information</div>
+            <div class="text-desc mt-2">Privacy Policy</div>
+            <div class="text-desc mt-2">Brands</div>
+            <div class="text-desc mt-2">Contact Us</div>
+            <div class="text-desc mt-2">Returns</div>
+            <div class="text-desc mt-2">Site Map</div>
+          </div>
+          <div class="col-2 mt-3">
+            <div class="content-box text-label">My Account</div>
+            <div class="text-desc mt-3">Store Location</div>
+            <div class="text-desc mt-2">Order History</div>
+            <div class="text-desc mt-2">Wish List</div>
+            <div class="text-desc mt-2">Newsletter</div>
+            <div class="text-desc mt-2">Speacial Offers</div>
+            <div class="text-desc mt-2">Gift Certificates</div>
+            <div class="text-desc mt-2">Affiliate</div>
+          </div>
+          <div class="col-4 mt-3">
+            <div class="content-box text-label">Newsletter</div>
+            <div class="text-desc mt-3">
+                Enter your Email address beow o subscribe to our newsletter and keep up to date with discounts and special offers.
+                <div>
+                  <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+                    <div>
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" formControlName="email">
+                      <div *ngIf="email.touched && email.invalid">
+                        <div *ngIf="email.errors?.required">
+                          Email is required.
+                        </div>
+                        <div *ngIf="email.errors?.email">
+                          Please enter a valid email address.
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-text" type="submit">Submit</button>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</footer>

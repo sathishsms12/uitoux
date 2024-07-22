@@ -1,0 +1,19 @@
+.carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-black-white {
+    filter: grayscale(100%);
+    width: 100%;
+    height: auto;
+  }
+  
+  .card {
+    border: none;
+    height: 100%;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
