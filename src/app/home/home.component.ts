@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   constructor() { }
-  images = [
+  images:any = [
     { src: 'assets/images/brand-1.png', title: 'AIMPARTS' },
     { src: 'assets/images/brand-2.png', title: 'WINDENGINE' },
     { src: 'assets/images/brand-3.png', title: 'TURBOELECTRIC' },
@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
     { src: 'assets/images/brand-15.png', title: 'BLACKBOX' },
     { src: 'assets/images/brand-16.png', title: 'SQUAREGARAGE' }
   ];
+  chunkedImages: string[][] = [];
+
   ngOnInit(): void {
+    
   }
 }

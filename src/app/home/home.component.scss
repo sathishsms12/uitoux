@@ -5,16 +5,27 @@
 
 .img-black-white {
   filter: grayscale(100%);
-  width: 100%;
-  height: auto;
+ 
 }
 
 .card {
   border: none;
   height: 100%;
 }
+// .image-gallery .img-wrapper {
+//   display: none;
+// }
+// .image-gallery .img-wrapper:nth-child(-n+8) {
+//   display: block;
+// }
 
 
+// .image-gallery .img-wrapper {
+//   display: none;
+// }
+// .image-gallery .img-wrapper:nth-child(-n+8) {
+//   display: block;
+// }
 
 .card-title {
   font-size: 1rem;

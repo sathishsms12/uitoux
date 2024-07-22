@@ -20,7 +20,7 @@
     </button>
 </div>
 
-<div class="container mt-4">
+<!-- <div class="container mt-4">
     <div class="row">
       <div class="col-12">
         <div class="d-flex flex-wrap">
@@ -35,5 +35,17 @@
         </div>
       </div>
     </div>
+</div> -->
+
+
+<div class="container mt-4">
+  <div class="row image-gallery">
+    <div *ngFor="let image of images; let i = index" class="col-3 img-wrapper img-black-white">
+      <img [src]="image.src" class="img-fluid" [alt]="'Image ' + (i + 1)">
+                      <h5 class="card-title">{{ image.title }}</h5>
+
+    </div>
+  </div>
 </div>
+
   
